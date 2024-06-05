@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+
+  <!--Meta-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--CSS-->
+  <link rel="stylesheet" href="style.css">
+  <!--Title-->
+  <title>Rock Paper Scissors</title>
+
+</head>
+
+<body>
+
+  <!--Game Container-->
+  <section class="game-container">
+    <h1 class="title">Rock Paper Scissors</h1>
+    <div class="images-container">
+      <button class="icon-button" onclick="
+        pickComputerMove();
+
+        makeMove('rock');
+      ">
+        <img class="move-icon" src="images/rock-emoji.png" alt="Rock">
+      </button>
+
+      <button class="icon-button" onclick="
+        pickComputerMove();
+
+        makeMove('paper');
+      ">
+        <img class="move-icon" src="images/paper-emoji.png" alt="Paper">
+      </button>
+
+      <button class="icon-button" onclick="
+        pickComputerMove();
+
+        makeMove('scissors');
+      ">
+        <img class="move-icon" src="images/scissors-emoji.png" alt="Scissors">
+      </button>
+    </div>
+  </section>
+
+  <!--JavaScript-->
+  <script>
+
+    let computerMove = '';
+    let result = '';
+
+    function makeMove(playerMove) {
+      if (playerMove === 'rock') {
+        if (computerMove === 'rock') {
+          result = 'Is a Tie.';
+        } else if (computerMove === 'paper') {
+          result = 'Sorry You Lose.';
+        } else if (computerMove === 'scissors') {
+          result = 'Congrats You Win.';
+        }
+
+      } else if (playerMove === 'paper') {
+        if (computerMove === 'rock') {
+          result = 'Sorry You Lose.';
+        } else if (playerMove === 'paper') {
+          result = 'Is a Tie.';
+        } else if (playerMover === 'scissors') {
+          result = 'Congrats You Win.';
+        }
+
+      } else if (playerMove === 'scissors') {
+        if (computerMove = 'rock') {
+          result = 'Sorry You Lose.';
+        } else if (computerMove = 'paper') {
+          result = 'Congrats You Win.';
+        }else if (computerMove = 'scissors') {
+          result = 'Is a Tie.';
+        }
+      }
+
+      alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
+      return 0;
+    }
+
+    function pickComputerMove() {
+      const randomNumber = Math.random();
+
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerMove = 'rock'
+      } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerMove = 'paper'
+      } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerMover = 'scissors'
+      }
+
+      return 0;
+    }
+    
+  </script>
+  
+</body>
+</html>
