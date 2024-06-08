@@ -1,11 +1,28 @@
 body {
-  background-color: rgb(25, 25, 25);
+  background-image: url(images/cloud-background.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: white;
   font-family: Arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.game-container {
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 25px;
+  text-align: center;
+  background-color: #009aff;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .title {
-  font-size: 30px;
+  font-size: 35px;
   font-weight: bold;
 }
 
@@ -40,4 +57,5 @@ body {
   font-size: 15px;
   padding: 8px 15px;
   cursor: pointer;
+  border-radius: 4px;
 }

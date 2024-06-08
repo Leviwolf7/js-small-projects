@@ -14,36 +14,41 @@
 </head>
 
 <body>
-  <p class="title">Rock Paper Scissors</p>
 
-  <button onclick="
-    makeMove('rock');
-  " class="move-button">
-    <img class="move-icon" src="images/rock-emoji.png" alt="rock-emoji">
-  </button>
+  <!--Game Container-->
+  <section class="game-container">
+    <h1 class="title">Rock Paper Scissors</h1>
 
-  <button onclick="
-    makeMove('paper');
-  " class="move-button">
-    <img class="move-icon" src="images/paper-emoji.png" alt="paper-emoji">
-  </button>
+    <button onclick="
+      makeMove('rock');
+    " class="move-button">
+      <img class="move-icon" src="images/rock-emoji.png" alt="rock-emoji">
+    </button>
 
-  <button onclick="
-    makeMove('scissors');
-  " class="move-button">
-    <img class="move-icon" src="images/scissors-emoji.png" alt="scissors-emoji">
-  </button>
+    <button onclick="
+      makeMove('paper');
+    " class="move-button">
+      <img class="move-icon" src="images/paper-emoji.png" alt="paper-emoji">
+    </button>
 
-  <p class="result js-result"></p>
-  <p class="js-moves-chosen"></p>
+    <button onclick="
+      makeMove('scissors');
+    " class="move-button">
+      <img class="move-icon" src="images/scissors-emoji.png" alt="scissors-emoji">
+    </button>
 
-  <p class="score js-score"></p>
-  <button class="reset-score-button" onclick="
-    resetScore();
-  ">
-    Reset Score
-  </button>
+    <p class="result js-result"></p>
+    <p class="js-moves-chosen"></p>
 
+    <p class="score js-score"></p>
+    <button class="reset-score-button" onclick="
+      resetScore();
+    ">
+      Reset Score
+    </button>
+  </section>
+
+  <!--JavaScript-->
   <script>
     let score = {
       wins: 0,
