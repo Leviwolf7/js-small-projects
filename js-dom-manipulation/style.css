@@ -62,3 +62,11 @@ ul {
 .background-orange {
   background-color: #ff7b0f;
 }
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: #ff7b0f;
+}
